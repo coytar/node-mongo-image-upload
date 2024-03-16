@@ -49,7 +49,7 @@ app.get("/images", async (req, res) => {
     const database = mongoClient.db("images");
     const images = database.collection("photos.files");
     const cursor = images.find({});
-    const count = await cursor.count();
+    const count = await images.countDocuments();
     if (count === 0) {
       return res.status(404).send({
         message: "Error: No Images found",
