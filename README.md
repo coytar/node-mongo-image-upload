@@ -1,0 +1,1 @@
+Finally! A working example of storing files in GridFS (MongoDB).
